@@ -432,5 +432,8 @@ def load_mistral_small_embedder(device: str | torch.device = "cuda") -> Mistral3
     return Mistral3SmallEmbedder().to(device)
 
 
+# def load_qwen3_embedder(variant: str, device: str | torch.device = "cuda"):
+#     return Qwen3Embedder(model_spec=f"Qwen/Qwen3-{variant}-FP8", device=device)
+
 def load_qwen3_embedder(variant: str, device: str | torch.device = "cuda"):
-    return Qwen3Embedder(model_spec=f"Qwen/Qwen3-{variant}-FP8", device=device)
+    return Qwen3Embedder(model_spec=f"Qwen/Qwen3-{variant}", device=device)
